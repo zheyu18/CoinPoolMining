@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_txt_7"
+    android:orientation="vertical"
+    tools:context=".activity.SwitchAccountActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_item_switch_account"
+        android:paddingLeft="15dp"
+        android:paddingTop="8dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="8dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/switch_account_image_header"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_me_placeholder"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/switch_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/switch_account_image_header"
+            android:text="我是昵称"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="正在使用"
+            android:textStyle="bold"
+            android:textColor="@color/col_theme"
+            android:textSize="@dimen/ts_12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_switch_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_item_switch_account"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="换个新账号试试"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_next" />
+    </RelativeLayout>
+</LinearLayout>

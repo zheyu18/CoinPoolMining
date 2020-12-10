@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4656F4</color>
+    <color name="colorPrimaryDark">#4656F4</color>
+    <color name="colorAccent">#4656F4</color>
+
+    <color name="col_theme">#4656F4</color> //主题颜色
+    <color name="col_light_theme">#CCD0FC</color>
+    <color name="col_white">#FFFFFF</color>
+    <color name="col_normal">#333333</color>
+    <color name="col_red">#FF3950</color>
+    <color name="orange">#FBB563</color>
+    <color name="col_green">#0E8C5E</color>
+    <color name="col_underline">#F1F1F1</color>
+
+    <color name="col_txt_1">#666666</color>
+    <color name="col_txt_2">#999999</color>
+    <color name="col_txt_3">#EEEEEE</color>
+    <color name="col_txt_4">#CCCCCC</color>
+    <color name="col_txt_5">#999AA5</color>
+    <color name="col_txt_6">#FAFAFA</color>
+    <color name="col_txt_7">#F6F6F6</color>
+    <color name="col_txt_8">#CACADC</color>
+    <color name="col_txt_9">#EAEAEA</color>
+    <color name="col_txt_10">#EBEBEB</color>
+    <color name="col_txt_11">#CDCDCD</color>
+    <color name="col_txt_12">#DDDDDD</color>
+</resources>

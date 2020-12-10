@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout style="@style/LayoutMyInfoLinearLayoutStyle">
+
+        <RelativeLayout
+            android:id="@+id/layout_me_about"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_about"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_about" />
+
+            <TextView
+                android:id="@+id/tv_me_about"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_about"
+                android:text="@string/about_us" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_about"
+                android:layout_toRightOf="@+id/iv_me_about"
+                android:text="@string/txt_version_update_detection" />
+        </RelativeLayout>
+
+        <View style="@style/LayoutMyInfoViewTwoStyle" />
+
+        <RelativeLayout
+            android:id="@+id/layout_me_feedback"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_feedback"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_feedback" />
+
+            <TextView
+                android:id="@+id/tv_me_feedback"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_feedback"
+                android:text="@string/feedback" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_feedback"
+                android:layout_toRightOf="@+id/iv_me_feedback"
+                android:text="@string/txt_help_feedback" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LayoutMyInfoLinearLayoutStyle">
+
+        <RelativeLayout
+            android:id="@+id/layout_me_user_agreement"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_user_agreement"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_user_agreement" />
+
+            <TextView
+                android:id="@+id/tv_me_user_agreement"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_user_agreement"
+                android:text="@string/user_agreement" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_user_agreement"
+                android:layout_toRightOf="@+id/iv_me_user_agreement"
+                android:text="@string/txt_sign_service_agreement" />
+        </RelativeLayout>
+
+        <View style="@style/LayoutMyInfoViewTwoStyle" />
+
+        <RelativeLayout
+            android:id="@+id/layout_me_private_policy"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_private_policy"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_private_policy" />
+
+            <TextView
+                android:id="@+id/tv_me_private_policy"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_private_policy"
+                android:text="@string/privacy_policy" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_private_policy"
+                android:layout_toRightOf="@+id/iv_me_private_policy"
+                android:text="@string/txt_private_protect" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LayoutMyInfoLinearLayoutStyle">
+
+        <RelativeLayout
+            android:id="@+id/layout_me_cache"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_cache"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_cache" />
+
+            <TextView
+                android:id="@+id/tv_me_cache"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_cache"
+                android:text="@string/clear_cache" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_cache"
+                android:layout_toRightOf="@+id/iv_me_cache"
+                android:text="@string/txt_clear_data_cache" />
+        </RelativeLayout>
+
+        <View style="@style/LayoutMyInfoViewTwoStyle" />
+
+        <RelativeLayout
+            android:id="@+id/layout_me_setting"
+            style="@style/LayoutMyInfoRelativeLayoutStyle">
+
+            <ImageView
+                android:id="@+id/iv_me_setting"
+                style="@style/LayoutMyInfoImageViewStyle"
+                android:src="@drawable/ic_me_setting" />
+
+            <TextView
+                android:id="@+id/tv_me_setting"
+                style="@style/LayoutMyInfoTextViewOneStyle"
+                android:layout_toRightOf="@+id/iv_me_setting"
+                android:text="@string/setting" />
+
+            <TextView
+                style="@style/LayoutMyInfoTextViewTwoStyle"
+                android:layout_below="@+id/tv_me_setting"
+                android:layout_toRightOf="@+id/iv_me_setting"
+                android:text="@string/txt_account_setting" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

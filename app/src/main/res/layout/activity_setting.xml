@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SettingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_setting_change_pwd"
+            style="@style/SettingLinearLayoutOneStyle">
+            <LinearLayout style="@style/SettingLinearLayoutTwoStyle">
+                <TextView
+                    style="@style/SettingTextViewStyle"
+                    android:text="@string/change_pwd" />
+                <TextView
+                    style="@style/SettingNextStyle"/>
+            </LinearLayout>
+            <View style="@style/SettingViewStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_setting_switch_account"
+            style="@style/SettingLinearLayoutOneStyle">
+            <LinearLayout style="@style/SettingLinearLayoutTwoStyle">
+                <TextView
+                    style="@style/SettingTextViewStyle"
+                    android:text="@string/switch_account" />
+                <TextView
+                    style="@style/SettingNextStyle"/>
+            </LinearLayout>
+            <View style="@style/SettingViewStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_setting_delete_account"
+            style="@style/SettingLinearLayoutOneStyle">
+            <LinearLayout style="@style/SettingLinearLayoutTwoStyle">
+                <TextView
+                    style="@style/SettingTextViewStyle"
+                    android:text="@string/delete_account" />
+                <TextView
+                    style="@style/SettingNextStyle"/>
+            </LinearLayout>
+            <View style="@style/SettingViewStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_logout"
+        android:gravity="center"
+        android:text="@string/logout"
+        android:textColor="@color/col_white"
+        android:textSize="@dimen/ts_18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

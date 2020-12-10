@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+     android:textSize="16sp"
+            android:background="@color/colorGray_F6F6F6"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+    -->
+    <style name="k_chart_item_style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/colorGray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--
+     android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+    -->
+    <style name="k_chart_item_box_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!--
+    android:layout_centerInParent="true"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    -->
+    <style name="k_chart_item_desc_style">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

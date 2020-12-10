@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/col_txt_7">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_top_community"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:id="@+id/layout_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            tl:tl_indicator_height="0dp"
+            tl:tl_indicator_width_equal_title="false"
+            tl:tl_tab_space_equal="false"
+            tl:tl_textAllCaps="true"
+            tl:tl_textBold="SELECT"
+            tl:tl_textSelectColor="@color/col_white"
+            tl:tl_textSelectSize="@dimen/ts_18sp"
+            tl:tl_textUnSelectColor="@color/col_light_theme"
+            tl:tl_textUnSelectSize="@dimen/ts_15sp" />
+
+        <ImageView
+            android:id="@+id/iv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_user_publish" />
+
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/layout_tab_layout"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

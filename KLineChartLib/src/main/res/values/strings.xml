@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KLineChart</string>
+    <string name="trading_on">交易对</string>
+    <string name="new_price">最新价</string>
+    <string name="top_price">最高价</string>
+    <string name="rose">涨幅</string>
+    <string name="no_data">暂无数据</string>
+    <string name="net_work_error">网络错误</string>
+    <string name="refresh">刷新</string>
+    <string name="loading_data">加载中</string>
+</resources>

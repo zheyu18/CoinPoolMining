@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="@string/whether_to_follow"
+            android:textColor="@color/col_txt_2"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/col_underline" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/col_normal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="@string/dialog_cancel"
+            android:textColor="@color/col_normal"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

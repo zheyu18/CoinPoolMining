@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.FeedbackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_feedback"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ts_15sp"
+                    android:textColor="@color/col_normal"
+                    android:text="问题标签"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择问题类型"
+                    android:textSize="@dimen/ts_12sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/col_txt_2"/>
+
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/calendar_data_group"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_economic_data"
+                    style="@style/FeedbackRbStyle"
+                    android:background="@drawable/bg_problem_selector"
+                    android:checked="true"
+                    android:text="使用问题" />
+
+                <RadioButton
+                    android:id="@+id/rb_latest"
+                    style="@style/FeedbackRbStyle"
+                    android:background="@drawable/bg_problem_selector"
+                    android:text="其它" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/ts_15sp"
+                android:textColor="@color/col_normal"
+                android:text="问题和意见"/>
+
+            <EditText
+                android:id="@+id/et_feedback_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="把你遇到的问题或者更好的建议写在这里"
+                android:layout_marginTop="10dp"
+                android:gravity="top"
+                android:textSize="@dimen/ts_14sp"
+                android:textColorHint="@color/col_txt_2"
+                android:textColor="@color/col_txt_2"
+                android:maxLength="100"
+                android:background="@null"/>
+            <!--图片列表控件-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/feedback_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/btn_login"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_18sp" />
+
+</LinearLayout>

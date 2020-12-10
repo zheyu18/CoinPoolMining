@@ -1,0 +1,220 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="TimeMarketItemTextViewStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/ts_14sp</item>
+        <item name="android:textColor">@color/col_normal</item>
+    </style>
+
+    <style name="LayoutMyInfoItemStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TextViewMyInfoItemTopStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">0</item>
+        <item name="android:textColor">@color/col_normal</item>
+        <item name="android:textSize">@dimen/ts_22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewMyInfoItemBottomStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/col_txt_2</item>
+        <item name="android:textSize">@dimen/ts_12sp</item>
+        <item name="android:layout_marginTop">7dp</item>
+    </style>
+
+    <!-- 个人中心相关-->
+    <style name="LayoutMyInfoLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LayoutMyInfoRelativeLayoutStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_me_item_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+    <style name="LayoutMyInfoImageViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="LayoutMyInfoTextViewOneStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/col_normal</item>
+        <item name="android:textSize">@dimen/ts_15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LayoutMyInfoTextViewTwoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/col_txt_2</item>
+        <item name="android:textSize">@dimen/ts_12sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="LayoutMyInfoViewTwoStyle">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!-- 个人中心相关-->
+
+    <!--    设置相关-->
+    <style name="SettingLinearLayoutOneStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="SettingLinearLayoutTwoStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="SettingTextViewStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/col_normal</item>
+        <item name="android:textSize">@dimen/ts_15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SettingNextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableRight">@drawable/ic_next</item>
+    </style>
+
+    <style name="SettingViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@color/col_txt_9</item>
+    </style>
+    <!--    设置相关-->
+
+    <style name="RequestCodeDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog">
+        <!-- 窗口背景色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--进出动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="BottomDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+    <style name="BottomDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+
+    <style name="SignInDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog">
+        <!-- 窗口背景色 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--进出动画-->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/sign_in_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/sign_in_dialog_out</item>
+    </style>
+
+    <style name="FeedbackRbStyle">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@drawable/text_selector</item>
+        <item name="android:textSize">@dimen/ts_13sp</item>
+    </style>
+</resources>

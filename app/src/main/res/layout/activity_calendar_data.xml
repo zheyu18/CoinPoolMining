@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/col_txt_7">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="@color/col_txt_7"
+            app:elevation="0dp">
+            <com.lihang.ShadowLayout
+                android:id="@+id/layout_calender_data"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_leftShow="true"
+                tl:hl_rightShow="true"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowColor="#2a000000"
+                tl:hl_cornerRadius="15dp"
+                app:hl_shadowLimit="3dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_current_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textColor="@color/col_normal"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/col_txt_3"/>
+                    <com.haibin.calendarview.CalendarLayout
+                        android:id="@+id/calendarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        app:default_status="shrink">
+
+                        <com.haibin.calendarview.CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            app:calendar_height="45dp"
+                            app:current_month_text_color="@color/col_txt_2"
+                            app:min_year="2004"
+                            app:month_view="com.bc.bit.view.signin.SignInMonthView"
+                            app:other_month_text_color="@color/col_txt_2"
+                            app:scheme_text="假"
+                            app:scheme_text_color="@color/col_txt_2"
+                            app:scheme_theme_color="@color/col_txt_2"
+                            app:selected_text_color="#fff"
+                            app:selected_theme_color="@color/col_theme"
+                            app:week_bar_height="15dp"
+                            app:week_text_color="@color/col_txt_2"
+                            app:week_view="com.bc.bit.view.IndustryStormWeekView"
+                            app:year_view_day_text_color="@color/col_txt_2"
+                            app:year_view_day_text_size="@dimen/ts_19sp"
+                            app:year_view_month_text_color="#ff0000"
+                            app:year_view_month_text_size="@dimen/ts_15sp"
+                            app:year_view_scheme_color="@color/col_txt_5" />
+                    </com.haibin.calendarview.CalendarLayout>
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/calendar_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendar_data_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

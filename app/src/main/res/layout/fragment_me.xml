@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/me_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/col_txt_7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_me"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/home_nav_me"
+                android:textColor="@color/col_normal"
+                android:textSize="@dimen/ts_18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pic_me_placeholder"
+                    app:riv_corner_radius="25dp"
+                    app:riv_oval="true" />
+
+
+                <TextView
+                    android:id="@+id/tv_login_immediately"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/login_or_register"
+                    android:textColor="@color/col_txt_1"
+                    android:textSize="@dimen/ts_15sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_myinfor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/col_normal"
+                        android:textSize="@dimen/ts_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/col_txt_1"
+                        android:textSize="@dimen/ts_13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_me_concern"
+                        style="@style/LayoutMyInfoItemStyle">
+
+                        <TextView
+                            android:id="@+id/me_concerned_count"
+                            style="@style/TextViewMyInfoItemTopStyle" />
+
+                        <TextView
+                            style="@style/TextViewMyInfoItemBottomStyle"
+                            android:text="@string/concerned" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_me_fans"
+                        style="@style/LayoutMyInfoItemStyle">
+                        <TextView
+                            android:id="@+id/me_fans_count"
+                            style="@style/TextViewMyInfoItemTopStyle" />
+
+                        <TextView
+                            style="@style/TextViewMyInfoItemBottomStyle"
+                            android:text="@string/fans" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_me_dynamic"
+                        style="@style/LayoutMyInfoItemStyle">
+
+                        <TextView
+                            android:id="@+id/me_dynamic_count"
+                            style="@style/TextViewMyInfoItemTopStyle" />
+
+                        <TextView
+                            style="@style/TextViewMyInfoItemBottomStyle"
+                            android:text="@string/dynamic" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/go_sign_in" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <include layout="@layout/layout_me_content"/>
+
+    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

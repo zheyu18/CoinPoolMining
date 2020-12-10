@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_page_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/col_txt_7">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:background="@color/col_txt_7"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.bc.bit.view.XCollapsingToolbarLayout
+                android:id="@+id/ctl_test_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#00ffffff"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_top_home" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_search"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_search"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_search"
+                                android:drawablePadding="8dp"
+                                android:text="@string/search_hint"
+                                android:textColor="@color/col_txt_2" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/ic_news" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/bg_notice"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_notice" />
+
+                        <com.sunfusheng.marqueeview.MarqueeView
+                            android:id="@+id/marqueeView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:mvAnimDuration="1000"
+                            app:mvDirection="bottom_to_top"
+                            app:mvInterval="5000"
+                            app:mvSingleLine="false"
+                            app:mvTextColor="@color/col_normal"
+                            app:mvTextSize="@dimen/ts_12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.bc.bit.view.XCollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_calender_data"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_home_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_calendar_data"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="@string/calendar_data"
+                            android:textColor="@color/col_normal"
+                            android:textSize="@dimen/ts_13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_timely_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_home_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_timely_news"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="@string/timely_info_title"
+                            android:textColor="@color/col_normal"
+                            android:textSize="@dimen/ts_13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_industry_storm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_home_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_industry_storm"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="@string/industry_situation"
+                            android:textColor="@color/col_normal"
+                            android:textSize="@dimen/ts_13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="@string/currency_conversion"
+                    android:textColor="@color/col_normal"
+                    android:textSize="@dimen/ts_17sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bg_currency_conversion"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_currency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_currency_conversion_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/iv_currency_flag"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_country"
+                                app:riv_oval="true" />
+
+                            <TextView
+                                android:id="@+id/tv_currency_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@drawable/ic_expand"
+                                android:drawablePadding="5dp"
+                                android:text="USA"
+                                android:textColor="@color/col_white"
+                                android:textSize="@dimen/ts_15sp" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/et_currency_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:textSize="@dimen/ts_14sp"
+                                android:textStyle="bold" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/col_txt_1" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_base_currency_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="1美元=6.5295人民币"
+                            android:textColor="@color/col_txt_1"
+                            android:textSize="@dimen/ts_11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_base_exchange_currency_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="1美元=6.5295人民币"
+                            android:textColor="@color/col_txt_1"
+                            android:textSize="@dimen/ts_11sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:src="@drawable/ic_exchange" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_currency_conversion_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/iv_exchange_currency_flag"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_country"
+                                app:riv_oval="true" />
+
+                            <TextView
+                                android:id="@+id/tv_exchange_currency_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@drawable/ic_expand"
+                                android:drawablePadding="5dp"
+                                android:text="USA"
+                                android:textColor="@color/col_white"
+                                android:textSize="@dimen/ts_15sp" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/et_currency_exchange_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:textSize="@dimen/ts_14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/col_txt_1" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_exchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_exchange"
+                            android:gravity="center"
+                            android:text="@string/exchange"
+                            android:textColor="@color/col_white"
+                            android:textSize="@dimen/ts_12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/currency_rec"
+                    android:textColor="@color/col_normal"
+                    android:textSize="@dimen/ts_17sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_market_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="@string/hotspot_express"
+                    android:textColor="@color/col_normal"
+                    android:textSize="@dimen/ts_17sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_news_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/col_white"
+            android:orientation="vertical"
+            app:layout_behavior="@string/behavior_home_page_title">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/home_nav_index"
+                    android:textColor="@color/col_normal"
+                    android:textSize="@dimen/ts_18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+

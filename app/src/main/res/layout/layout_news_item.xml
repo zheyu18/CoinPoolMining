@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="15dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pic_news_notice" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="系统通知"
+                    android:textColor="@color/col_normal"
+                    android:textSize="@dimen/ts_14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刚刚"
+                    android:textColor="@color/col_txt_2"
+                    android:textSize="@dimen/ts_10sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="未成年个人信息保护条款更新"
+                android:textColor="@color/col_normal"
+                android:textSize="@dimen/ts_12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@color/col_red"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="删除"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp" />
+</LinearLayout>

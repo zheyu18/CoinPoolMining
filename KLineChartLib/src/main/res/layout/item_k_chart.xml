@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_k_chart_box"
+    android:orientation="vertical">
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout style="@style/k_chart_item_box_style">
+
+            <TextView
+                android:id="@+id/item_k_chart_name"
+                style="@style/k_chart_item_desc_style"
+              />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/k_chart_item_box_style">
+
+            <TextView
+                android:id="@+id/item_k_chart_new_price"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                style="@style/k_chart_item_desc_style"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/k_chart_item_box_style">
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                style="@style/k_chart_item_desc_style"
+                android:id="@+id/item_k_chart_top_price"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/k_chart_item_box_style">
+            <TextView
+                android:id="@+id/item_k_chart_rose"
+
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                style="@style/k_chart_item_desc_style"
+                android:background="@drawable/red_shape"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:alpha="0.1"
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

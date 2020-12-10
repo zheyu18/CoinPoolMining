@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/col_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bnt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_black_back"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/col_normal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/top_center_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/top_right_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_15sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/top_right_txts"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/col_normal"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

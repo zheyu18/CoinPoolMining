@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/col_txt_7">
+    <include layout="@layout/fg_topbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        <TextView
+            style="@style/TimeMarketItemTextViewStyle"
+            android:text="@string/time_market_title_name"
+            android:paddingLeft="10dp"
+            android:gravity="left"/>
+        <TextView
+            style="@style/TimeMarketItemTextViewStyle"
+            android:gravity="center"
+            android:text="@string/latest_price"/>
+        <TextView
+            style="@style/TimeMarketItemTextViewStyle"
+            android:text="@string/quote_change"
+            android:gravity="right"
+            android:paddingRight="10dp"/>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/timely_market_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timely_market_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

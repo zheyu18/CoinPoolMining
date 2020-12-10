@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/bg_item_calendar_data">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_country_flag"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tv_item_calendar_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_country_flag"
+                android:textColor="@color/col_txt_1"
+                android:textSize="@dimen/ts_10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_calendar_publish_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_unpublished"
+            android:paddingLeft="8dp"
+            android:paddingTop="1.5dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="1.5dp"
+            android:textSize="@dimen/ts_10sp" />
+
+    </LinearLayout>
+    <RatingBar
+        android:id="@+id/item_calendar_data_ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_marginTop="5dp"
+        android:progressTint="@color/orange"
+        android:rating="2"
+        android:stepSize="1" />
+        <TextView
+            android:id="@+id/tv_item_calendar_data_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_14sp" />
+
+        <TextView
+            android:id="@+id/tv_item_former_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/col_txt_1"
+            android:textSize="@dimen/ts_11sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_item_expected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/col_txt_1"
+            android:textSize="@dimen/ts_11sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_item_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/col_txt_1"
+            android:textSize="@dimen/ts_11sp"
+            android:layout_marginTop="10dp"/>
+
+</LinearLayout>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InfoDetailActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_article_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/col_normal" />
+
+            <com.luck.picture.lib.widget.SquareRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layout_img_article"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+                <!--封面容器-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding_small"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/radius_small"
+                    app:cardElevation="0dp">
+                    <!--封面-->
+                    <ImageView
+                        android:id="@+id/img_article"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/picture_image_placeholder" />
+                </androidx.cardview.widget.CardView>
+            </com.luck.picture.lib.widget.SquareRelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorGray_F6F6F6">#F6F6F6</color>
+    <color name="colorGray">#999999</color>
+    <color name="k_chart_details_normal_color" >#ffffff</color>
+    <color name="k_chart_details_selected_color">#ffffff</color>
+    <color name="k_chart_details_indicator_color">#ffffff</color>
+    <color name="k_chart_details_tab_layout">#FF5747</color>
+    <color name="k_chart_item_bg">#B1B2B6</color>
+    <color name="k_chart_details_title_text_color">#333333</color>
+    <color name="k_chart_details_bg_color">#1d1f26</color>
+    <color name="k_chart_red">#DF3536</color>
+    <color name="k_line_select_dialog_bg_color">#1d1f26</color>
+
+    <!--K线图-->
+    <color name="chart_red">#DF3536</color>
+    <color name="chart_green">#35DF7E</color>
+
+    <color name="chart_ma5">#18CCF6</color>
+    <color name="chart_ma10">#FE5EDF</color>
+    <color name="chart_ma20">#E7A520</color>
+    <color name="chart_white">#fff</color>
+
+    <color name="chart_background">#202326</color>
+    <color name="chart_grid_line">#353941</color>
+    <color name="chart_text">#B1B2B6</color>
+    <color name="chart_selector">#c830343C</color>
+    <color name="chart_tab_background">#30343C</color>
+    <color name="chart_tab_indicator">#FF6601</color>
+
+    <color name="chart_line">#C9933E</color>
+    <color name="chart_line_background">#1aC9933E</color>
+
+    <color name="chart_ma30">#FFC76D</color>
+    <color name="chart_bac">#00FFFFFF</color>
+    <color name="chart_point_bac">#202326</color>
+
+</resources>

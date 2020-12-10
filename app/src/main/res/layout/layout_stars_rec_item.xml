@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="80dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/bg_star_rec_item"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:id="@+id/item_star_rec_layout_concern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/item_star_rec_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_me_placeholder"
+            app:riv_corner_radius="15dp"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_add_concern" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_star_rec_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是姓名"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/col_normal"
+            android:textSize="@dimen/ts_14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_star_rec_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/col_txt_2"
+                android:textSize="@dimen/ts_11sp" />
+
+            <TextView
+                android:id="@+id/item_star_rec_concerned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/col_txt_2"
+                android:textSize="@dimen/ts_11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

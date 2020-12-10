@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/pic_bg_sign_in_dialog"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_sign_in_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:gravity="center"
+                android:text="已签到1天，金币+10， 继续加油！"
+                android:textColor="@color/col_normal"
+                android:textSize="@dimen/ts_15sp" />
+
+            <TextView
+                android:id="@+id/tv_sign_in_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_sign_in_confirm"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/col_white"
+                android:textSize="@dimen/ts_16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
