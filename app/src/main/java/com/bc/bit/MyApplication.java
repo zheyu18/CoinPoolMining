@@ -36,7 +36,8 @@ public class MyApplication extends Application implements Application.ActivityLi
     public void onCreate() {
         super.onCreate();
         context = this;
-        MyContext.create(this).loadUser().getBaseUrl();
+        MyContext.create(this).loadUser()
+                .getBaseUrl().loadCurrencyData();
         //注册界面声明周期监听
         registerActivityLifecycleCallbacks(this);
         // 初始化toast工具类

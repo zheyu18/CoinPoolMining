@@ -8,12 +8,19 @@ import android.text.TextUtils;
 import com.bc.bit.activity.LoginActivity;
 import com.bc.bit.api.BaseUrlConfig;
 import com.bc.bit.bean.BaseUrlConfigBean;
+import com.bc.bit.bean.CurrencyBean;
 import com.bc.bit.bean.UserBean;
 import com.bc.bit.util.ActivityCollector;
 import com.bc.bit.util.Constant;
+import com.bc.bit.util.IOUtil;
 import com.bc.bit.util.JsonUtil;
 import com.bc.bit.util.NextActivityRequest;
 import com.bc.bit.util.SharePreferce;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.util.List;
 
 
 public class MyContext {
@@ -21,6 +28,7 @@ public class MyContext {
     private static Context mContext;
     private UserBean mUser;
     private BaseUrlConfigBean baseUrlConfig;
+    private List<CurrencyBean> currencyBeanList;
 
     private MyContext(Context context) {
         this.mContext = context;
@@ -79,7 +87,7 @@ public class MyContext {
         // 清空本地数据
         MyContext.context().clear();
         // UI
-        NextActivityRequest.with(context, LoginActivity.class).put(Constant.ID,Constant.LOGOUT).go();
+        NextActivityRequest.with(context, LoginActivity.class).put(Constant.ID, Constant.LOGOUT).go();
         ActivityCollector.finishAll();
 
     }
@@ -91,7 +99,8 @@ public class MyContext {
 
 
     /**
-     *  获取当前版本号
+     * 获取当前版本号
+     *
      * @return
      */
     public String version() {
@@ -110,14 +119,29 @@ public class MyContext {
         BaseUrlConfig.getBaseUrlConfig();
         return this;
     }
+
     public void saveBaseUrl(BaseUrlConfigBean bean) {
         if (bean != null) {
             baseUrlConfig = bean;
         }
     }
 
-
     public BaseUrlConfigBean getBaseUrlConfig() {
         return baseUrlConfig;
+    }
+
+    public MyContext loadCurrencyData() {
+        try {
+            String jsonStr = IOUtil.readInputStreamToString(mContext.getAssets().open("currency.json"));
+            currencyBeanList = new Gson().fromJson(jsonStr, new TypeToken<List<CurrencyBean>>() {
+            }.getType());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
+    public List<CurrencyBean> getCurrencyBeanList() {
+        return currencyBeanList;
     }
 }

@@ -1,0 +1,74 @@
+[
+  {
+    "baseCurrency": "USD",
+    "baseSymbol": "USD",
+    "rates": [
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 0.8433,
+        "symbol": "EUR"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 0.7549,
+        "symbol": "GBP"
+      }
+    ,
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 104.12,
+        "symbol": "JPY"
+      }
+    ,
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 6.5601,
+        "symbol": "CNY"
+      }
+    ,
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.000057,
+        "symbol": "BTC"
+      }
+    ,
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 6.510847,
+        "symbol": "BITCNY"
+      }
+    ,
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate":0.00,
+        "symbol": "BCH"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "EUR",
+    "baseSymbol": "EUR",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 1.1867,
+        "symbol": "USD"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 0.8950,
+        "symbol": "GBP"
+      }
+
+    ]
+  }
+]
