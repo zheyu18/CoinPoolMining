@@ -4,13 +4,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -36,12 +34,14 @@ import com.bc.bit.bean.ListMoreResponse;
 import com.bc.bit.bean.TalkBean;
 import com.bc.bit.fragment.base.BaseCommonFragment;
 import com.bc.bit.util.Constant;
+import com.bc.bit.util.ImgUtil;
 import com.bc.bit.view.CurrencyPopupDialog;
 import com.bc.bit.view.ExchangeCurrencyPopupDialog;
 import com.bc.bit.view.SpaceItemDecoration;
 import com.bc.bit.view.XCollapsingToolbarLayout;
 import com.google.android.material.appbar.AppBarLayout;
 import com.gyf.immersionbar.ImmersionBar;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.scrb.klinechart.request.base.KBaseObjectBean;
 import com.scrb.klinechart.request.base.KRequestManager;
 import com.scrb.klinechart.request.base.KRequestSubscribe;
@@ -49,6 +49,7 @@ import com.scrb.klinechart.request.bean.KChartBean;
 import com.scrb.klinechart.ui.activity.KChartDetailsActivity;
 import com.sunfusheng.marqueeview.MarqueeView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,7 +82,14 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
     TextView tvCurrencyName;
     @BindView(R.id.tv_exchange_currency_name)
     TextView tvExchangeCurrencyName;
-
+    @BindView(R.id.iv_currency_flag)
+    RoundedImageView ivCurrencyFlag;
+    @BindView(R.id.iv_exchange_currency_flag)
+    RoundedImageView ivExchangeCurrencyFlag;
+    @BindView(R.id.tv_base_currency_rate)
+    TextView tvBaseCurrencyRate;
+    @BindView(R.id.tv_base_exchange_currency_rate)
+    TextView tvBaseExchangeCurrencyRate;
     private RecMarketAdapter recMarketAdapter;
     private HomeHotNewsAdapter mAdapter;
     private List<KChartBean> kChartList = new ArrayList<>();
@@ -94,6 +102,7 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
     private int currencyPosition = -1;
     private ExchangeCurrencyPopupDialog mExchangeCurrencyPopupDialog;
     private CurrencyBean.RatesBean rate;
+    private DecimalFormat df = new DecimalFormat("#.##");
 
     public static HomePageFragment newInstance() {
         return new HomePageFragment();
@@ -169,9 +178,13 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
 
         etCurrencyAmount.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) { }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
             @Override
             public void afterTextChanged(Editable s) {
                 String currencyAmount = readTxt(etCurrencyAmount);
@@ -282,7 +295,6 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
 
     @OnClick({R.id.layout_search, R.id.iv_news, R.id.layout_calender_data,
             R.id.layout_timely_info, R.id.layout_industry_storm,
-            R.id.et_currency_amount,
             R.id.layout_currency, R.id.layout_exchange_currency})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -303,11 +315,6 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
                 startActivity(IndustryStormActivity.class);
                 break;
 
-            case R.id.et_currency_amount:
-
-                break;
-
-
             case R.id.layout_currency:
                 if (mCurrencyPopupDialog == null) {
                     mCurrencyPopupDialog = new CurrencyPopupDialog(getMainActivity(),
@@ -318,7 +325,11 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
                     currencyPosition = position;
                     CurrencyBean currencyBean = currencyBeanList.get(position);
                     tvCurrencyName.setText(currencyBean.getBaseSymbol());
+                    ivCurrencyFlag.setImageResource(ImgUtil.getImage(currencyBean.getCurrencyImage()));
+
                     etCurrencyAmount.setText("");
+                    tvExchangeCurrencyName.setText("请选择");
+                    ivExchangeCurrencyFlag.setImageResource(R.drawable.flag_missing);
                 });
                 break;
 
@@ -327,13 +338,19 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
                     showTxt("请先选择需对比货币");
                     return;
                 }
-                List<CurrencyBean.RatesBean> rates = currencyBeanList.get(currencyPosition).getRates();
+                CurrencyBean currencyBean = currencyBeanList.get(currencyPosition);
+                List<CurrencyBean.RatesBean> rates = currencyBean.getRates();
                 mExchangeCurrencyPopupDialog = new ExchangeCurrencyPopupDialog(getMainActivity(),
                         R.style.RequestCodeDialogStyle, rates);
                 mExchangeCurrencyPopupDialog.show();
                 mExchangeCurrencyPopupDialog.setOnItemClickExchangeCurrency(position -> {
-                    tvExchangeCurrencyName.setText(rates.get(position).getName_zh());
                     rate = rates.get(position);
+                    tvExchangeCurrencyName.setText(rate.getSymbol());
+                    ivExchangeCurrencyFlag.setImageResource(ImgUtil.getImage(rate.getCurrencyExchangeImage()));
+                    double rateDb = 1 / rate.getRate();
+                    Double getDouble = Double.parseDouble(df.format(rateDb));
+                    tvBaseCurrencyRate.setText("1 " + currencyBean.getBaseSymbol() + " = " + rate.getRate() + " " + rate.getSymbol());
+                    tvBaseExchangeCurrencyRate.setText("1 " + rate.getSymbol() + " = " + getDouble + " " + currencyBean.getBaseSymbol());
                     etCurrencyAmount.setText("");
                 });
                 break;

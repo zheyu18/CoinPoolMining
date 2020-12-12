@@ -12,6 +12,26 @@ public class CurrencyBean {
 
     private String baseCurrency;
     private String baseSymbol;
+
+    public String getBase_name_zh() {
+        return base_name_zh;
+    }
+
+    public void setBase_name_zh(String base_name_zh) {
+        this.base_name_zh = base_name_zh;
+    }
+
+    private String base_name_zh;
+
+    public String getCurrencyImage() {
+        return currencyImage;
+    }
+
+    public void setCurrencyImage(String currencyImage) {
+        this.currencyImage = currencyImage;
+    }
+
+    private String currencyImage;
     private List<RatesBean> rates;
 
     public int getSelectPosition() {
@@ -60,6 +80,16 @@ public class CurrencyBean {
         private String name_zh;
         private double rate;
         private String symbol;
+
+        public String getCurrencyExchangeImage() {
+            return currencyExchangeImage;
+        }
+
+        public void setCurrencyExchangeImage(String currencyExchangeImage) {
+            this.currencyExchangeImage = currencyExchangeImage;
+        }
+
+        private String currencyExchangeImage;
 
         public String getName() {
             return name;

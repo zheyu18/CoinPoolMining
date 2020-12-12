@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bc.bit.R;
 import com.bc.bit.bean.CurrencyBean;
+import com.bc.bit.util.ImgUtil;
 
 import java.util.List;
 
@@ -74,7 +75,8 @@ public class CurrencyDialogAdapter extends BaseAdapter {
         ImageView item_currency_image = (ImageView)view.findViewById(R.id.item_currency_image);
         TextView item_currency_name = (TextView) view.findViewById(R.id.item_currency_name);
         CheckedTextView ctv = (CheckedTextView) view.findViewById(R.id.ctv_name);
-        item_currency_name.setText(currencyBeanList.get(position).getBaseCurrency());
+        item_currency_name.setText(currencyBeanList.get(position).getBase_name_zh());
+        item_currency_image.setImageResource(ImgUtil.getImage(currencyBeanList.get(position).getCurrencyImage()));
         updateBackground(position, ctv);
         return view;
 
@@ -83,7 +85,7 @@ public class CurrencyDialogAdapter extends BaseAdapter {
     public void updateBackground(int position, View view) {
         int backgroundId;
         if (lv.isItemChecked(position)) {
-            backgroundId = R.drawable.btn_selected;
+            backgroundId = R.drawable.ic_selected;
         } else {
             backgroundId = R.drawable.btn_unselected;
         }

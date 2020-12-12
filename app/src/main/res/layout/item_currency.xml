@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/item_currency_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
@@ -25,10 +25,9 @@
         android:textSize="@dimen/ts_15sp" />
     <CheckedTextView
         android:id="@+id/ctv_name"
-        android:layout_width="13dp"
-        android:layout_height="13dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_gravity="center"
-        android:background="@drawable/btn_selected"/>
+        android:layout_gravity="center" />
 </RelativeLayout>

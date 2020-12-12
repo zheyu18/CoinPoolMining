@@ -18,6 +18,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 
 import Decoder.BASE64Encoder;
 
@@ -52,7 +53,6 @@ public final class ImgUtil {
             this.path = path;
         }
     }
-
 
 
     /**
@@ -143,8 +143,6 @@ public final class ImgUtil {
 
         return src;
     }
-
-
 
 
     public static Bitmap decode(Context context, int resId) {
@@ -254,12 +252,11 @@ public final class ImgUtil {
     }
 
 
-
     private Bitmap getimage(String srcPath) {
         BitmapFactory.Options newOpts = new BitmapFactory.Options();
         //开始读入图片，此时把options.inJustDecodeBounds 设回true了
         newOpts.inJustDecodeBounds = true;
-        Bitmap bitmap = BitmapFactory.decodeFile(srcPath,newOpts);//此时返回bm为空
+        Bitmap bitmap = BitmapFactory.decodeFile(srcPath, newOpts);//此时返回bm为空
 
         newOpts.inJustDecodeBounds = false;
         int w = newOpts.outWidth;
@@ -287,7 +284,7 @@ public final class ImgUtil {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         image.compress(Bitmap.CompressFormat.JPEG, 100, baos);//质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
         int options = 100;
-        while ( baos.toByteArray().length / 1024>100) { //循环判断如果压缩后图片是否大于100kb,大于继续压缩
+        while (baos.toByteArray().length / 1024 > 100) { //循环判断如果压缩后图片是否大于100kb,大于继续压缩
             baos.reset();//重置baos即清空baos
             image.compress(Bitmap.CompressFormat.JPEG, options, baos);//这里压缩options%，把压缩后的数据存放到baos中
             options -= 10;//每次都减少10
@@ -298,13 +295,10 @@ public final class ImgUtil {
     }
 
 
-
     public static Bitmap base64ToBitmap(String base64Data) {
         byte[] bytes = Base64.decode(base64Data, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
-
-
 
 
     public static Bitmap compressScale(Bitmap image, File file) {
@@ -358,7 +352,7 @@ public final class ImgUtil {
      */
     public static void compressImages(Bitmap bmp, File file) {
         // 0-100 100为不压缩
-        int quality =100;
+        int quality = 100;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         // 把压缩后的数据存放到baos中
         bmp.compress(Bitmap.CompressFormat.JPEG, quality, baos);
@@ -395,6 +389,7 @@ public final class ImgUtil {
         inputFile.close();
         return new BASE64Encoder().encode(buffer);
     }
+
     /**
      * 获取公共配置
      *
@@ -434,5 +429,25 @@ public final class ImgUtil {
                 .load(resourceId)
                 .apply(options)
                 .into(view);
+    }
+
+
+    /**
+     * 根据图片名显示图片
+     *
+     * @param name
+     * @return
+     */
+    public static int getImage(String name) {
+        Class drawable = R.drawable.class;
+        Field field = null;
+        try {
+            field = drawable.getField(name);
+            int images = field.getInt(field.getName());
+            return images;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }
