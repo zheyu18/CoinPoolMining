@@ -53,6 +53,13 @@
         "rate": 0.00,
         "symbol": "BCH",
         "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 7.163158,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
       }
     ]
   },
@@ -108,6 +115,454 @@
         "name": "BCH",
         "name_zh": "比特币现金",
         "rate": 0.00466,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 8.690184,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "GBP",
+    "baseSymbol": "GBP",
+    "currencyImage": "flag_eng",
+    "base_name_zh": "英镑",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 1.3261,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 1.1173,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 138.03,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 8.6821,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.0,
+        "symbol": "BTC",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 8.6,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 0.00517542,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 9.4627755,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "JPY",
+    "baseSymbol": "JPY",
+    "currencyImage": "flag_jpy",
+    "base_name_zh": "日元",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 0.00961,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 0.00809,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 138.03,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 0.06290,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.0,
+        "symbol": "BTC",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 0.0,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 0.00004,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 0.0689572,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "CNY",
+    "baseSymbol": "CNY",
+    "currencyImage": "flag_cny",
+    "base_name_zh": "人民币",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 0.1528,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 0.1287,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 0.1152,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 15.8972,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.00,
+        "symbol": "BTC",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 0.98,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 0.00059896,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 1.0820739,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "BTC",
+    "baseSymbol": "BTC",
+    "currencyImage": "ic_flag_bitcoin",
+    "base_name_zh": "比特币",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 18056.00,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 15110.20000,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 13350.0,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 1828705,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 117554.00,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 115580,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 70.47216,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 131578.94737,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "BITCNY",
+    "baseSymbol": "BITCNY",
+    "currencyImage": "ic_flag_bitcoin",
+    "base_name_zh": "比特元",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 0.2,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 0.1,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 0.1,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 16,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 1.02,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 0.00013826,
+        "symbol": "BCH",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 1.1103240,
+        "symbol": "RIRE",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "BCH",
+    "baseSymbol": "BCH",
+    "currencyImage": "ic_flag_bitcoin",
+    "base_name_zh": "比特币现金",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 248.96,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 208.43000,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 186.01,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 25751.00000,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 1603.5000,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.01418,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 1906.578947,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      }
+    ]
+  },
+  {
+    "baseCurrency": "FIRE",
+    "baseSymbol": "FIRE",
+    "currencyImage": "ic_flag_bitcoin",
+    "base_name_zh": "火币",
+    "rates": [
+      {
+        "name": "USD",
+        "name_zh": "美元",
+        "rate": 0.2465,
+        "symbol": "USD",
+        "currencyExchangeImage": "flag_usd"
+      },
+      {
+        "name": "EUR",
+        "name_zh": "欧元",
+        "rate": 0.115066,
+        "symbol": "EUR",
+        "currencyExchangeImage": "flag_eur"
+      },
+      {
+        "name": "GBP",
+        "name_zh": "英镑",
+        "rate": 0.1055815,
+        "symbol": "GBP",
+        "currencyExchangeImage": "flag_eng"
+      },
+      {
+        "name": "JPY",
+        "name_zh": "日元",
+        "rate": 14.5107484,
+        "symbol": "JPY",
+        "currencyExchangeImage": "flag_jpy"
+      },
+      {
+        "name": "CNY",
+        "name_zh": "人民币",
+        "rate": 0.9247411,
+        "symbol": "CNY",
+        "currencyExchangeImage": "flag_cny"
+      },
+      {
+        "name": "BTC",
+        "name_zh": "比特币",
+        "rate": 0.00001,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BITCNY",
+        "name_zh": "比特元",
+        "rate": 0.9009420,
+        "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "BCH",
+        "name_zh": "比特币现金",
+        "rate": 0.000525,
         "symbol": "BCH",
         "currencyExchangeImage": "ic_flag_bitcoin"
       }

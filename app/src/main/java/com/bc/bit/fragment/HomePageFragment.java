@@ -35,6 +35,7 @@ import com.bc.bit.bean.TalkBean;
 import com.bc.bit.fragment.base.BaseCommonFragment;
 import com.bc.bit.util.Constant;
 import com.bc.bit.util.ImgUtil;
+import com.bc.bit.util.LogUtil;
 import com.bc.bit.view.CurrencyPopupDialog;
 import com.bc.bit.view.ExchangeCurrencyPopupDialog;
 import com.bc.bit.view.SpaceItemDecoration;
@@ -194,8 +195,12 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
                         etCurrencyAmount.setText("");
                         return;
                     }
-                    int currencyNum = Integer.parseInt(currencyAmount);
-                    currencyExchangeAmount.setText((currencyNum * (rate.getRate())) + "");
+                    try {
+                        int currencyNum = Integer.parseInt(currencyAmount);
+                        currencyExchangeAmount.setText((currencyNum * (rate.getRate())) + "");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 } else {
                     currencyExchangeAmount.setText("");
                 }
@@ -314,47 +319,58 @@ public class HomePageFragment extends BaseCommonFragment implements XCollapsingT
             case R.id.layout_industry_storm:
                 startActivity(IndustryStormActivity.class);
                 break;
-
             case R.id.layout_currency:
-                if (mCurrencyPopupDialog == null) {
-                    mCurrencyPopupDialog = new CurrencyPopupDialog(getMainActivity(),
-                            R.style.RequestCodeDialogStyle, currencyBeanList);
-                }
-                mCurrencyPopupDialog.show();
-                mCurrencyPopupDialog.setOnItemClickCurrencyDialog((position) -> {
-                    currencyPosition = position;
-                    CurrencyBean currencyBean = currencyBeanList.get(position);
-                    tvCurrencyName.setText(currencyBean.getBaseSymbol());
-                    ivCurrencyFlag.setImageResource(ImgUtil.getImage(currencyBean.getCurrencyImage()));
-
-                    etCurrencyAmount.setText("");
-                    tvExchangeCurrencyName.setText("请选择");
-                    ivExchangeCurrencyFlag.setImageResource(R.drawable.flag_missing);
-                });
+                handleCurrency();
                 break;
-
             case R.id.layout_exchange_currency:
-                if (currencyPosition == -1) {
-                    showTxt("请先选择需对比货币");
-                    return;
-                }
-                CurrencyBean currencyBean = currencyBeanList.get(currencyPosition);
-                List<CurrencyBean.RatesBean> rates = currencyBean.getRates();
-                mExchangeCurrencyPopupDialog = new ExchangeCurrencyPopupDialog(getMainActivity(),
-                        R.style.RequestCodeDialogStyle, rates);
-                mExchangeCurrencyPopupDialog.show();
-                mExchangeCurrencyPopupDialog.setOnItemClickExchangeCurrency(position -> {
-                    rate = rates.get(position);
-                    tvExchangeCurrencyName.setText(rate.getSymbol());
-                    ivExchangeCurrencyFlag.setImageResource(ImgUtil.getImage(rate.getCurrencyExchangeImage()));
-                    double rateDb = 1 / rate.getRate();
-                    Double getDouble = Double.parseDouble(df.format(rateDb));
-                    tvBaseCurrencyRate.setText("1 " + currencyBean.getBaseSymbol() + " = " + rate.getRate() + " " + rate.getSymbol());
-                    tvBaseExchangeCurrencyRate.setText("1 " + rate.getSymbol() + " = " + getDouble + " " + currencyBean.getBaseSymbol());
-                    etCurrencyAmount.setText("");
-                });
+                handleExchangeCurrency();
                 break;
 
         }
+    }
+
+    private void handleCurrency() {
+        if (mCurrencyPopupDialog == null) {
+            mCurrencyPopupDialog = new CurrencyPopupDialog(getMainActivity(),
+                    R.style.RequestCodeDialogStyle, currencyBeanList);
+        }
+        mCurrencyPopupDialog.show();
+        mCurrencyPopupDialog.setOnItemClickCurrencyDialog((position) -> {
+            currencyPosition = position;
+            CurrencyBean currencyBean = currencyBeanList.get(position);
+            tvCurrencyName.setText(currencyBean.getBaseSymbol());
+            ivCurrencyFlag.setImageResource(ImgUtil.getImage(currencyBean.getCurrencyImage()));
+            etCurrencyAmount.setText("");
+            tvExchangeCurrencyName.setText("请选择");
+            ivExchangeCurrencyFlag.setImageResource(R.drawable.flag_missing);
+        });
+    }
+
+
+    private void handleExchangeCurrency() {
+        if (currencyPosition == -1) {
+            showTxt("请先选择需对比货币");
+            return;
+        }
+        CurrencyBean currencyBean = currencyBeanList.get(currencyPosition);
+        List<CurrencyBean.RatesBean> rates = currencyBean.getRates();
+        mExchangeCurrencyPopupDialog = new ExchangeCurrencyPopupDialog(getMainActivity(),
+                R.style.RequestCodeDialogStyle, rates);
+        mExchangeCurrencyPopupDialog.show();
+        mExchangeCurrencyPopupDialog.setOnItemClickExchangeCurrency(position -> {
+            rate = rates.get(position);
+            tvExchangeCurrencyName.setText(rate.getSymbol());
+            ivExchangeCurrencyFlag.setImageResource(ImgUtil.getImage(rate.getCurrencyExchangeImage()));
+            Double getDouble;
+            try {
+                double rateDb = 1 / rate.getRate();
+                getDouble = Double.parseDouble(df.format(rateDb));
+            } catch (Exception e) {
+                getDouble = 0.0;
+            }
+            tvBaseCurrencyRate.setText("1 " + currencyBean.getBaseSymbol() + " = " + rate.getRate() + " " + rate.getSymbol());
+            tvBaseExchangeCurrencyRate.setText("1 " + rate.getSymbol() + " = " + getDouble + " " + currencyBean.getBaseSymbol());
+            etCurrencyAmount.setText("");
+        });
     }
 }
