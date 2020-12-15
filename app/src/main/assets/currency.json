@@ -498,8 +498,15 @@
       {
         "name": "BITCNY",
         "name_zh": "比特元",
-        "rate": 1906.578947,
+        "rate": 1612.76230,
         "symbol": "BITCNY",
+        "currencyExchangeImage": "ic_flag_bitcoin"
+      },
+      {
+        "name": "RIRE",
+        "name_zh": "火币",
+        "rate": 1906.578947,
+        "symbol": "RIRE",
         "currencyExchangeImage": "ic_flag_bitcoin"
       }
     ]

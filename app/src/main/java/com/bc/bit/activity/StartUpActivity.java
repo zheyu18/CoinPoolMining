@@ -46,8 +46,7 @@ public class StartUpActivity extends BaseCommonActivity {
         mWebUrlSpare = SharePreferce.getInstance(StartUpActivity.this).getString(Constant.TRIPARTITE_URL_SPARE);
         mPool = SharePreferce.getInstance(StartUpActivity.this).getString(Constant.TRIPARTITE_URL_SPARE_POOL);
         mHandler.postDelayed(() -> {
-//            showAgreement();
-            goMain();
+            showAgreement();
         }, 1000);
     }
 

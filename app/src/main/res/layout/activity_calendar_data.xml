@@ -26,7 +26,7 @@
                 tl:hl_rightShow="true"
                 app:hl_shadowBackColor="@color/white"
                 app:hl_shadowColor="#2a000000"
-                tl:hl_cornerRadius="15dp"
+                tl:hl_cornerRadius="5dp"
                 app:hl_shadowLimit="3dp"
                 android:layout_margin="10dp">
                 <LinearLayout

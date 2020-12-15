@@ -43,7 +43,7 @@ public class Constant {
     /**
      *  项目主题类型(验证码、注册接口专用)
      */
-    public static final String PROJECT_NAME_CODE = "qklcl";
+    public static final String PROJECT_NAME_CODE = "bcwk";
 
     public static final String TYPE_ONE = "1";
     public static final String TYPE_TWO = "2";

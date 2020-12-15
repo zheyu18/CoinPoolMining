@@ -12,7 +12,7 @@ import okhttp3.Call;
  * BaseUrl配置
  */
 public class BaseUrlConfig {
-    private static final String baseUrl = "http://rap2api.taobao.org/app/mock/272472/qklcl";
+    private static final String baseUrl = "http://rap2api.taobao.org/app/mock/273199/bcwk";
 
     public static void getBaseUrlConfig() {
         OkHttpUtils.post().url(baseUrl)
