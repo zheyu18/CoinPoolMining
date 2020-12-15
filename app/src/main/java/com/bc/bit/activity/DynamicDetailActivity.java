@@ -113,7 +113,7 @@ public class DynamicDetailActivity extends BaseTitleActivity {
 
         articlePublishContent.setText(talkBean.getContent() + "");
         articlePublishName.setText(talkBean.getUser().getNickName());
-        articlePublishTime.setText(TimeUtil.commonFormat(talkBean.getPublishTime()));
+        articlePublishTime.setText(TimeUtil.commonFormat(talkBean.getPublishTime()- Constant.TIME_DIFF));
         Glide.with(getMainActivity()).load(talkBean.getUser().getHead())
                 .apply(new RequestOptions().placeholder(R.drawable.pic_me_placeholder))
                 .error(R.drawable.pic_me_placeholder).into(imageHeader);

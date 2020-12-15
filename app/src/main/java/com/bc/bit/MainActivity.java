@@ -18,6 +18,9 @@ import com.gyf.immersionbar.ImmersionBar;
 
 import butterknife.BindView;
 
+/**
+ *  主页
+ */
 public class MainActivity extends BaseCommonActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     @BindView(R.id.vp_home_pager)
     ViewPager mViewPager;
