@@ -21,7 +21,6 @@
             android:textStyle="bold"
             android:textColor="@color/col_normal"
             android:textSize="@dimen/ts_20sp" />
-
     </RelativeLayout>
 
 </LinearLayout>
