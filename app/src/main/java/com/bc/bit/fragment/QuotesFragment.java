@@ -143,9 +143,4 @@ public class QuotesFragment extends BaseCommonFragment {
         return errorView;
     }
 
-    @OnClick(R.id.iv_right)
-    public void onViewClicked() {
-        if (!checkLogin()) return;
-        startActivity(SearchActivity.class);
-    }
 }

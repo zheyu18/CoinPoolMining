@@ -22,15 +22,6 @@
             android:textColor="@color/col_normal"
             android:textSize="@dimen/ts_20sp" />
 
-        <ImageView
-            android:id="@+id/iv_right"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:gravity="center"
-            android:src="@drawable/ic_title_search"/>
     </RelativeLayout>
 
 </LinearLayout>
